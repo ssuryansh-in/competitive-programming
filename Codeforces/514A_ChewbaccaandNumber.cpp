@@ -40,7 +40,7 @@ void solve() {
 
     while(n != 0) {
         int dig = n % 10;
-        if(dig > 4 && n / 10 != 0) {
+        if(dig > 4 && (n / 10 != 0 || dig != 9)) {
             newN = newN * 10 + (9 - dig);
         }
         else {
