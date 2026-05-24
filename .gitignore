@@ -1,0 +1,18 @@
+# Compiled files
+*.exe
+*.out
+*.o
+*.class
+
+# Input/output files
+input.txt
+output.txt
+
+# VS Code settings
+.vscode/
+
+# Temporary files
+*.tmp
+
+#main file
+main.cpp
