@@ -35,26 +35,19 @@ const int MOD = 1e9 + 7;
 const int INF = 1e18;
 
 void solve() {
-    int n, newN = 0;
-    cin >> n;
+    string s;
+    cin >> s;
 
-    while(n != 0) {
-        int dig = n % 10;
-        if(dig > 4 && (n / 10 != 0 || dig != 9)) {
-            newN = newN * 10 + (9 - dig);
-        }
-        else {
-            newN = newN * 10 + dig;
-        }
-        n /= 10;
+    f(i, sz(s)) {
+        int dig = s[i] - '0';
+        int inv = 9 - dig;
+
+        if(i == 0 && inv == 0) 
+            continue;
+        if(inv < dig) 
+            s[i] = char(inv + '0');
     }
-    n = 0;
-    while(newN != 0) {
-        int dig = newN % 10;
-        n = n * 10 + dig;
-        newN /= 10;
-    }
-    cout << n << endl;
+    cout << s << endl;
 
 }
 
